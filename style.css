@@ -1,0 +1,173 @@
+body{
+    background-color: #f1f1f1;
+}
+.tab-ul ul{
+    visibility: hidden;
+}
+
+.nav-main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:15vh;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+.logo  {
+    width: 400px;
+    height: 100px;
+    /*text-align: center;*/
+    position: absolute;
+
+ }
+.logo img {
+    width: 349px;
+    height: 80px;
+    position: relative;
+    top: 10px;
+
+ }
+ 
+ .nav-main .desktop-ul #left-menu{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    right: 70vh;
+    top: 5vh;
+ }
+ .nav-main .desktop-ul #right-menu{
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    left: 3vh;
+    top: 5vh;
+ }
+
+
+.nav-main .desktop-ul ul {
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    /*padding: 15px;*/
+    top: 0px;
+    bottom: -1vh;
+    align-items: baseline;
+
+}
+.nav-main ul li{
+list-style: none;
+line-height: 0px;
+padding: 10px 55px 0 0;
+}
+
+.nav-main ul li a{
+    display: block;
+    height: 200%;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #111;
+    font-family: arial;
+    font-size: 16px;
+}
+
+
+/*-------------------- Tablet  --------------------------*/
+@media (max-width:1080px) {
+    .nav-main .desktop-ul ul{
+        visibility: hidden;
+    }
+    .nav-main{
+        height:20vh;
+    }
+    .logo  {
+        text-align: center;
+    }
+    .logo img {
+        width: 289px;
+        height: 65px;
+        top: -9px;
+    }
+    .nav-main .tab-ul ul{
+        visibility: visible;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        bottom: -7vh;
+    }
+
+}
+
+/*-------------------- large Mobile  --------------------------*/
+@media (max-width:414px){
+     .nav-main .tab-ul ul{
+        visibility: hidden;
+    }
+    .toggle button {
+        position: absolute;
+        left: 1vh;
+        justify-content: start;
+        z-index: 1;
+        top: 30px;
+        background: transparent;
+        border: none;
+    }
+     .nav-main{
+        height:12vh;
+    }
+    .logo  {
+        width: 100%;
+        height: 70px;
+     }
+     .logo img {
+        width: 223px;
+        height: 65px;
+        left: -1px;
+        top: 2px;
+     }
+      .nav-main .tab-ul ul {
+         height: 40vh;
+         width: 50%;
+         top: 80px;
+         left: 0%;
+         background-color: whitesmoke;
+         border-radius: 10px;
+         visibility: hidden;
+         box-shadow: none;
+     }
+     .nav-main ul li {
+         position: relative;
+         left: 30px;
+         top: 10px;
+
+     }
+}
+   
+
+/*-------------------- small Mobile  --------------------------*/
+@media (max-width:320px) {
+    .toggle button {
+            left: 0px;
+        }
+        .logo img {
+        width: 180px;
+        height: 60px;
+        left: 7px;
+        top: 5px;
+     }
+
+      .nav-main .tab-ul ul {
+         top: 60px;
+         width: 70%;
+     }
+
+}
